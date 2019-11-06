@@ -2,15 +2,11 @@ WELCOME_PHRASES = [
   "Welche fragen hast du über die Bulme?",
   "Wie kann ich dir behilflich sein?",
   "Hast du Fragen über unsere Schule?",
-  "Stelle mir eine Frage über die Bulme?"
+  "Stelle mir eine Frage über die Bulme!"
 ]
 DEFAULT_ANSWERS = [
-  "Ich muss darüber nachdenken.",
+  "Stelle mir die frage neu.",
   "Bitte formuliere deine Frage neu.",
-  "this sounds interesting.",
-  "let me think about it.",
-  "please tell me more.",
-  "and...?"
   ]
 
 GOODBYE_PHRASES = [
@@ -38,14 +34,13 @@ rules = [
 
   # keywords without personal pronoun
 
-  [r"bitch|fick dich|arschloch|hure",
+  [r"bitch|fick dich|arschloch|hure|wixer",
    ["Bitte benutze Wörter wie '%MATCH' nicht!",
     "Wieso bist du so wütend?"]
    ],
 
   [r"elektronik",
-   ["Man lern programmieren, Bluetooth verstehen, Geräte entwickeln von Audioverstärker bis Zufallsgenerator.",
-   ]
+   ["Man lern programmieren, Bluetooth verstehen, Geräte entwickeln von Audioverstärker bis Zufallsgenerator.",]
    ],
   
   [r"zweig|zweige|ausbildungszweige",
@@ -56,37 +51,32 @@ rules = [
    ["Die Elektoronik bietet Wahlpflichtfächer wie: Biomedizin, Softwareentwicklung, Netzwerktechnik, Audioelektronik"]
    ],
   
-  [r"schwerpunkte|wahlpflichtfächer | elektronik",
+  [r"schwerpunkte | wahlpflichtfächer | elektronik",
    ["Die Elektoronik bietet Wahlpflichtfächer wie: Biomedizin, Softwareentwicklung, Netzwerktechnik, Audioelektronik"]
    ],
 
-  ["mädchen",
+  [r"mädchen",
    ["Leider sind Maschinenbauerinnen oder Elektrotechnikerinnen noch immer die Ausnahme in der Welt der Technik. Erfolge gibt es aber zu verbuchen, denn in den HTLs hat sich der Mädchenanteil in den letzten 25 Jahren um fast 300 Prozent gesteigert. Unsere Schule bietet den Mädchen den passenden Einstieg in die Welt der Technik und haltet ihnen die Türen offen zu interessierten Betrieben und Weiterbildungsangeboten nach der Reife- und Diplomprüfung. Denn die Industrie sucht händeringend nach technischen Fachkräften, immer stärker auch nach weiblichen Fachkräften.Eine Mädchenbeauftragte vernetzt die Tagschülerinnen, es gibt immer wieder gemeinsame Aktivitäten. Wir erkennen das Potential unserer Schülerinnen und versuchen sie auf ihrem Weg zu unterstützen"]
    ],
 
-  [r"perhaps|possibly|maybe|probably",
-   ["you aren't very confident about that.",
-    "this sounds quite doubtful."]
+  [r"aufnahmekriterien | noten | voraussetzungen | aufnahmeprüfung",
+   ["um keine Aufnahmeprüfung zu machen musst du folgened tun: Kommst du aus dem Gymnasium reicht es überall positiv zu sein. In der NMS musst du darauf achten, dass du in den Hauptfächern(Deutsch, Mathe, Englisch) im VA Bereich liegst."
    ],
 
-  ["dream",
-   ["tell me about your dreams.",
-    "do you dream often?"]
+  [r"schwer | schule",
+   ["Nichts ist schwer sofern jemand dafür gelernt hat."]
    ],
 
-  ["friend",
-   ["do you have many friends?",
-    "what do your friends mean to you?"]
+  [r"streng | lehrer | stoff",
+   ["Im Großen und Ganzen sind die Lehrer sehr nett. Vielleicht gibt es den ein oder anderen Lehrer der im Unterricht den Schülern etwas mehr beibringen möchte ;) ."]
    ],
 
-  [r"alike|similar|equal|same",
-   ["in what way?",
-    "how?"]
+  [r"schüler gibt es |lehrer gibt es ",
+   ["Es gibt ungefähr 2000 Schüler & Schülerinnen an unserer Schule und 220 Lehrer & Lehrerinnen."]
    ],
 
-  [r"rich|wealthy|poor|broke|bankrupt|money|debt",
-   ["do you have financial problems?",
-    "how important is money in your life?"]
+  [r"Ingeneur",
+   ["Um Ingeneur zu werden musst du 3 Jahre gearbeitet haben in einem deiner Fachgebiete."]
    ],
 
   [r"loss|lost",
@@ -99,9 +89,9 @@ rules = [
     "is it a problem for you that i am a %MATCH?"]
    ],
 
-  [r"thank you|thanks",
-   ["you're welcome.",
-    "no problem."]
+  [r"danke|dankeschön|vielen dank",
+   ["Keine Ursache.",
+    "Bitteschön. Lasse mich wissen wenn du noch welche Fragen hast."]
    ],
 
   [r"mother|father|sister|brother|daughter|\bson\b|daughter",
